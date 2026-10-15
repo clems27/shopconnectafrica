@@ -1,0 +1,546 @@
+
+.marketplace-page {
+  min-height: 100vh;
+  background: #fafcf9;
+  color: #19251f;
+}
+
+.marketplace-header {
+  min-height: 76px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #fff;
+  border-bottom: 1px solid #e8eee9;
+}
+
+.marketplace-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.marketplace-brand-icon {
+  width: 41px;
+  height: 41px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: #16784c;
+}
+
+.marketplace-brand strong,
+.marketplace-brand small {
+  display: block;
+}
+
+.marketplace-brand strong {
+  font-size: 16px;
+  letter-spacing: -0.5px;
+}
+
+.marketplace-brand small {
+  margin-top: 2px;
+  color: #16784c;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.marketplace-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.marketplace-nav a {
+  color: #68756e;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.marketplace-nav a.active {
+  color: #16784c;
+}
+
+.marketplace-cart {
+  min-height: 40px;
+  padding: 0 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #e1e9e2;
+  border-radius: 9px;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.marketplace-main {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+}
+
+.marketplace-intro {
+  padding: 65px 0 40px;
+  text-align: center;
+}
+
+.marketplace-intro .section-kicker,
+.market-seller-banner .section-kicker {
+  color: #16784c;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+}
+
+.marketplace-intro h1 {
+  margin: 15px 0 10px;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(33px, 5vw, 49px);
+  line-height: 1.2;
+  letter-spacing: -2px;
+}
+
+.marketplace-intro h1 span {
+  color: #16784c;
+}
+
+.marketplace-intro > p {
+  margin: 0;
+  color: #68756e;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.market-search {
+  width: min(620px, 100%);
+  min-height: 56px;
+  margin: 28px auto 0;
+  padding: 0 17px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #dfe7e0;
+  border-radius: 12px;
+  background: #fff;
+  color: #7b8980;
+  box-shadow: 0 7px 25px rgba(31, 67, 44, 0.04);
+}
+
+.market-search:focus-within {
+  border-color: #7bb494;
+  box-shadow: 0 0 0 3px rgba(22, 120, 76, 0.08);
+}
+
+.market-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #19251f;
+  font: inherit;
+  font-size: 12px;
+}
+
+.market-search input::placeholder {
+  color: #97a19a;
+}
+
+.search-filter-icon {
+  flex-shrink: 0;
+}
+
+.market-category-section {
+  padding: 20px 0 38px;
+}
+
+.market-category-section h2,
+.market-products-heading h2 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+
+.market-category-list {
+  margin-top: 17px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.market-category-chip {
+  min-height: 38px;
+  padding: 0 15px;
+  border: 1px solid #e0e8e1;
+  border-radius: 30px;
+  background: #fff;
+  color: #556259;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.market-category-chip:hover,
+.market-category-chip.selected {
+  border-color: #16784c;
+  background: #16784c;
+  color: white;
+}
+
+.market-products-section {
+  padding-bottom: 52px;
+}
+
+.market-products-heading {
+  margin-bottom: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.market-products-heading p {
+  margin: 6px 0 0;
+  color: #758178;
+  font-size: 11px;
+}
+
+.demo-label {
+  padding: 8px 10px;
+  border-radius: 7px;
+  background: #fff1d8;
+  color: #875c13;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.market-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.market-product-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e6ece6;
+  border-radius: 13px;
+  background: white;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.market-product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(31, 67, 44, 0.08);
+}
+
+.market-product-art {
+  position: relative;
+  min-height: 165px;
+  display: grid;
+  place-items: center;
+}
+
+.market-product-art > span:first-child {
+  font-size: 57px;
+  filter: drop-shadow(0 8px 9px rgba(0, 0, 0, 0.08));
+}
+
+.sample-tag {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  padding: 5px 7px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #647067;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.market-product-info {
+  padding: 15px;
+}
+
+.market-product-category {
+  color: #16784c;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.market-product-info h3 {
+  margin: 7px 0 9px;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.market-product-merchant {
+  min-width: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #7b877e;
+  font-size: 10px;
+}
+
+.market-product-merchant svg {
+  flex-shrink: 0;
+}
+
+.market-product-bottom {
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px solid #eef1ed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.market-product-bottom strong {
+  font-size: 13px;
+}
+
+.market-product-bottom button {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  background: #edf6ef;
+  color: #16784c;
+  cursor: pointer;
+}
+
+.market-product-bottom button:hover {
+  background: #16784c;
+  color: white;
+}
+
+.market-empty-state {
+  padding: 50px 20px;
+  border: 1px dashed #d7e1d8;
+  border-radius: 14px;
+  text-align: center;
+  color: #68756e;
+}
+
+.market-empty-state h3 {
+  color: #19251f;
+  font-size: 16px;
+}
+
+.market-empty-state p {
+  font-size: 12px;
+}
+
+.market-reset-button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 8px;
+  background: #16784c;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.market-seller-banner {
+  margin-bottom: 55px;
+  padding: 29px;
+  border: 1px solid #e0e9e0;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: #eef6ed;
+}
+
+.market-seller-banner h2 {
+  margin: 10px 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 23px;
+  letter-spacing: -0.7px;
+}
+
+.market-seller-banner p {
+  max-width: 560px;
+  margin: 0;
+  color: #647168;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.market-seller-button {
+  min-height: 44px;
+  padding: 0 15px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+  background: #16784c;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.market-seller-button:hover {
+  background: #105d3b;
+}
+
+.marketplace-footer {
+  min-height: 75px;
+  padding: 20px 5%;
+  border-top: 1px solid #e7ece8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  color: #718076;
+  background: white;
+  font-size: 10px;
+}
+
+.marketplace-footer a {
+  color: #16784c;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .market-product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .market-product-art {
+    min-height: 145px;
+  }
+}
+
+@media (max-width: 650px) {
+  .marketplace-header {
+    min-height: 68px;
+    padding: 0 17px;
+    gap: 10px;
+  }
+
+  .marketplace-brand strong {
+    font-size: 14px;
+  }
+
+  .marketplace-nav {
+    display: none;
+  }
+
+  .marketplace-cart {
+    min-height: 37px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+
+  .marketplace-main {
+    width: calc(100% - 34px);
+  }
+
+  .marketplace-intro {
+    padding: 48px 0 30px;
+  }
+
+  .marketplace-intro h1 {
+    font-size: 35px;
+    letter-spacing: -1.5px;
+  }
+
+  .marketplace-intro > p {
+    font-size: 12px;
+  }
+
+  .market-search {
+    min-height: 50px;
+    gap: 8px;
+    padding: 0 12px;
+  }
+
+  .market-search input {
+    font-size: 11px;
+  }
+
+  .market-category-section h2,
+  .market-products-heading h2 {
+    font-size: 18px;
+  }
+
+  .market-category-list {
+    gap: 7px;
+  }
+
+  .market-category-chip {
+    min-height: 35px;
+    padding: 0 11px;
+    font-size: 10px;
+  }
+
+  .market-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+  }
+
+  .market-product-art {
+    min-height: 125px;
+  }
+
+  .market-product-art > span:first-child {
+    font-size: 45px;
+  }
+
+  .market-product-info {
+    padding: 11px;
+  }
+
+  .market-product-info h3 {
+    font-size: 12px;
+  }
+
+  .market-product-bottom strong {
+    font-size: 12px;
+  }
+
+  .market-product-bottom button {
+    width: 31px;
+    height: 31px;
+  }
+
+  .market-seller-banner {
+    padding: 21px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .market-seller-banner h2 {
+    font-size: 20px;
+  }
+
+  .market-seller-button {
+    width: 100%;
+  }
+
+  .marketplace-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px 17px;
+  }
+}
